@@ -12,7 +12,7 @@ import UIKit
 
 struct MyNavigationView : View {
     init() {
-        //네비에기션바 커스텀
+        //네비게이션바 커스텀
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()
         appearance.backgroundColor = UIColor(named: "MainColor")
@@ -147,7 +147,7 @@ struct MyNavigationView : View {
                             
                             Spacer()
                             
-                            MainButtonView(destination: FlowerListView(), buttonText:"기념일 관리", imageName:"Flower4")
+                            MainButtonView(destination: AnniversaryManagementView(), buttonText:"기념일 관리", imageName:"Flower4")
                         }
                         
                         //Spacer()
@@ -241,8 +241,6 @@ struct MyNavigationView : View {
                 .navigationTitle("FLORY")
                 
             }
-            
-        
     }
 }
 struct MyNavigationView_Previews: PreviewProvider {

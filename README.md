@@ -1,2 +1,0 @@
-# Flory-iOS
-Flory iOS

@@ -236,7 +236,7 @@ struct FlowerDetailView: View {
                 }
                 
             }.edgesIgnoringSafeArea(.all)
-            .sheet(isPresented: $showingPayment) {
+            .fullScreenCover(isPresented: $showingPayment) {
                 PaymentView(quantity: $quantity, pricePerItem: $pricePerItem)
             }
     }

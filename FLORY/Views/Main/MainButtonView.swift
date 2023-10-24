@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct MainButtonView: View {
-    var destination: FlowerListView
+struct MainButtonView<Destination: View>: View {
+    var destination: Destination
     var buttonText: String
     var imageName: String
 
-    init(destination: FlowerListView, buttonText: String, imageName: String) {
+    init(destination: Destination, buttonText: String, imageName: String) {
         self.destination = destination
         self.buttonText = buttonText
         self.imageName = imageName
