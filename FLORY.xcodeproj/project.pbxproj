@@ -14,7 +14,7 @@
 		FD5857112AC18F11006314B9 /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5857102AC18F11006314B9 /* PaymentView.swift */; };
 		FD58CC102AD2A78300310999 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD58CC0F2AD2A78300310999 /* SplashView.swift */; };
 		FD928D732AD6372F0092C42A /* FlowerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD928D722AD6372F0092C42A /* FlowerDetailView.swift */; };
-		FDAB4B4E2AE78BBE007D9DDE /* AnniversayManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB4B4D2AE78BBE007D9DDE /* AnniversayManagementView.swift */; };
+		FDAB4B4E2AE78BBE007D9DDE /* AnniversaryManagementView.swiftentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB4B4D2AE78BBE007D9DDE /* AnniversaryManagementView.swiftentView.swift */; };
 		FDBB88262ABB126800C8A1B1 /* MyNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBB88252ABB126800C8A1B1 /* MyNavigationView.swift */; };
 		FDF171502ABAEDB8001C8F80 /* FLORYApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF1714F2ABAEDB8001C8F80 /* FLORYApp.swift */; };
 		FDF171522ABAEDB8001C8F80 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF171512ABAEDB8001C8F80 /* ContentView.swift */; };
@@ -51,7 +51,7 @@
 		FD5857102AC18F11006314B9 /* PaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
 		FD58CC0F2AD2A78300310999 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		FD928D722AD6372F0092C42A /* FlowerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerDetailView.swift; sourceTree = "<group>"; };
-		FDAB4B4D2AE78BBE007D9DDE /* AnniversayManagementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnniversayManagementView.swift; sourceTree = "<group>"; };
+		FDAB4B4D2AE78BBE007D9DDE /* AnniversaryManagementView.swiftentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnniversaryManagementView.swiftentView.swift; sourceTree = "<group>"; };
 		FDBB88252ABB126800C8A1B1 /* MyNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNavigationView.swift; sourceTree = "<group>"; };
 		FDF1714C2ABAEDB8001C8F80 /* FLORY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FLORY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDF1714F2ABAEDB8001C8F80 /* FLORYApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLORYApp.swift; sourceTree = "<group>"; };
@@ -91,6 +91,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FD22C26E2AE7BFC500B0A3AC /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		FD2454472AC17292005207E5 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +108,7 @@
 		FDAB4B4F2AE7B533007D9DDE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FD22C26E2AE7BFC500B0A3AC /* New Group */,
 				FDAB4B552AE7B695007D9DDE /* Anniversary */,
 				FDAB4B542AE7B640007D9DDE /* Payment */,
 				FDAB4B532AE7B618007D9DDE /* Flower */,
@@ -158,6 +166,7 @@
 		FDAB4B552AE7B695007D9DDE /* Anniversary */ = {
 			isa = PBXGroup;
 			children = (
+				FDAB4B4D2AE78BBE007D9DDE /* AnniversaryManagementView.swiftentView.swift */,
 			);
 			path = Anniversary;
 			sourceTree = "<group>";
@@ -191,7 +200,6 @@
 				FDF171512ABAEDB8001C8F80 /* ContentView.swift */,
 				FDF171532ABAEDBA001C8F80 /* Assets.xcassets */,
 				FDF171552ABAEDBA001C8F80 /* Preview Content */,
-				FDAB4B4D2AE78BBE007D9DDE /* AnniversayManagementView.swift */,
 			);
 			path = FLORY;
 			sourceTree = "<group>";
@@ -352,7 +360,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDF171522ABAEDB8001C8F80 /* ContentView.swift in Sources */,
-				FDAB4B4E2AE78BBE007D9DDE /* AnniversayManagementView.swift in Sources */,
+				FDAB4B4E2AE78BBE007D9DDE /* AnniversaryManagementView.swiftentView.swift in Sources */,
 				FD58CC102AD2A78300310999 /* SplashView.swift in Sources */,
 				FD2454422AC14700005207E5 /* FlowerListView.swift in Sources */,
 				FD2454442AC158BA005207E5 /* MainButtonView.swift in Sources */,
