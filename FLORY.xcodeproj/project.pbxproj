@@ -14,6 +14,10 @@
 		FD2454422AC14700005207E5 /* FlowerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2454412AC14700005207E5 /* FlowerListView.swift */; };
 		FD2454442AC158BA005207E5 /* MainButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2454432AC158BA005207E5 /* MainButtonView.swift */; };
 		FD50AF502AE8DBB100873E75 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FD50AF4F2AE8DBB100873E75 /* Alamofire */; };
+		FD50AF542AE8DD4900873E75 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD50AF532AE8DD4900873E75 /* ChatView.swift */; };
+		FD50AF562AE8DD5200873E75 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD50AF552AE8DD5200873E75 /* ChatViewModel.swift */; };
+		FD50AF582AE8DE2100873E75 /* OpenAIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD50AF572AE8DE2100873E75 /* OpenAIService.swift */; };
+		FD50AF5A2AE8DE4F00873E75 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD50AF592AE8DE4F00873E75 /* Constants.swift */; };
 		FD5857112AC18F11006314B9 /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5857102AC18F11006314B9 /* PaymentView.swift */; };
 		FD58CC102AD2A78300310999 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD58CC0F2AD2A78300310999 /* SplashView.swift */; };
 		FD928D732AD6372F0092C42A /* FlowerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD928D722AD6372F0092C42A /* FlowerDetailView.swift */; };
@@ -53,6 +57,10 @@
 		FD22C2732AE7C28D00B0A3AC /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		FD2454412AC14700005207E5 /* FlowerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerListView.swift; sourceTree = "<group>"; };
 		FD2454432AC158BA005207E5 /* MainButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButtonView.swift; sourceTree = "<group>"; };
+		FD50AF532AE8DD4900873E75 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		FD50AF552AE8DD5200873E75 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		FD50AF572AE8DE2100873E75 /* OpenAIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIService.swift; sourceTree = "<group>"; };
+		FD50AF592AE8DE4F00873E75 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FD5857102AC18F11006314B9 /* PaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
 		FD58CC0F2AD2A78300310999 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		FD928D722AD6372F0092C42A /* FlowerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerDetailView.swift; sourceTree = "<group>"; };
@@ -216,6 +224,10 @@
 				FDF171512ABAEDB8001C8F80 /* ContentView.swift */,
 				FDF171532ABAEDBA001C8F80 /* Assets.xcassets */,
 				FDF171552ABAEDBA001C8F80 /* Preview Content */,
+				FD50AF532AE8DD4900873E75 /* ChatView.swift */,
+				FD50AF552AE8DD5200873E75 /* ChatViewModel.swift */,
+				FD50AF572AE8DE2100873E75 /* OpenAIService.swift */,
+				FD50AF592AE8DE4F00873E75 /* Constants.swift */,
 			);
 			path = FLORY;
 			sourceTree = "<group>";
@@ -382,19 +394,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD22C2742AE7C28D00B0A3AC /* PostView.swift in Sources */,
+				FD50AF582AE8DE2100873E75 /* OpenAIService.swift in Sources */,
 				FDF171522ABAEDB8001C8F80 /* ContentView.swift in Sources */,
 				FDAB4B4E2AE78BBE007D9DDE /* AnniversaryManagementView.swiftentView.swift in Sources */,
 				FD58CC102AD2A78300310999 /* SplashView.swift in Sources */,
 				FD2454422AC14700005207E5 /* FlowerListView.swift in Sources */,
 				FD22C2712AE7C21800B0A3AC /* Post.swift in Sources */,
 				FD2454442AC158BA005207E5 /* MainButtonView.swift in Sources */,
+				FD50AF542AE8DD4900873E75 /* ChatView.swift in Sources */,
 				FD5857112AC18F11006314B9 /* PaymentView.swift in Sources */,
 				FDFE45122AD5407900C2073D /* SignUpView.swift in Sources */,
+				FD50AF562AE8DD5200873E75 /* ChatViewModel.swift in Sources */,
 				FD1E0FCC2AD2AC170091CD33 /* IntroView.swift in Sources */,
 				FDF171502ABAEDB8001C8F80 /* FLORYApp.swift in Sources */,
 				FD1E0FCE2AD2CAE60091CD33 /* LoginView.swift in Sources */,
 				FD928D732AD6372F0092C42A /* FlowerDetailView.swift in Sources */,
 				FDBB88262ABB126800C8A1B1 /* MyNavigationView.swift in Sources */,
+				FD50AF5A2AE8DE4F00873E75 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

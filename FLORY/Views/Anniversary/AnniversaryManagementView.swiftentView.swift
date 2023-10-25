@@ -48,6 +48,7 @@ struct AnniversaryManagementView: View {
                 }
             }
         }
+        .navigationTitle("기념일 관리")
         .padding()
     }
 }
