@@ -10,7 +10,7 @@ struct ChatView: View {
                 }
             }
             HStack {
-                TextField("Enter a message ...", text:$viewModel.currentInput)
+                TextField("먼저 챗봇에게 인사를 해보세요", text:$viewModel.currentInput)
                 Button {
                     viewModel.sendMessage()
                 } label: {
@@ -27,6 +27,8 @@ struct ChatView: View {
         HStack {
             if message.role == .user {Spacer()}
             Text(message.content)
+                .padding()
+                .background(message.role == .user ? Color.blue : Color.gray.opacity(0.2))
             if message.role == .assistant {Spacer()}
         }
     }

@@ -5,10 +5,14 @@ struct NoticesView: View {
     let notices = [
         ("공지사항 제목 1", "공지사항 소제목 1..."),
         ("공지사항 제목 2", "공지사항 소제목 2..."),
+        ("공지사항 제목 2", "공지사항 소제목 2..."),
+        ("공지사항 제목 2", "공지사항 소제목 2..."),
+        ("공지사항 제목 2", "공지사항 소제목 2..."),
     ]
     
     var body: some View {
-        NavigationView {
+        VStack{
+
             List {
                 ForEach(notices, id: \.0) { title, subtitle in
                     NavigationLink(destination: NoticeDetailView(title: title, content: subtitle)) {
@@ -19,12 +23,15 @@ struct NoticesView: View {
                                 .font(.subheadline)
                                 .foregroundColor(.gray)
                         }
-                        .padding(.vertical, 10)
+                        .padding(.vertical, 15)
                     }
                 }
             }
-            .navigationTitle("공지사항")
-        }
+            
+            
+        }.navigationTitle("공지사항")
+           
+        
     }
 }
 

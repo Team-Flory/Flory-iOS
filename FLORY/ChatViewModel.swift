@@ -1,7 +1,8 @@
 import Foundation
 extension ChatView {
     class ViewModel: ObservableObject {
-        @Published var messages: [Message] = []
+        @Published var messages: [Message] = [Message(id: UUID(), role: .system, content: "You should recommend flowers. If the user greets you, respond with '안녕하세요! 나이와 기념일 종류를 알려주시면 적절한 꽃을 추천해드려요.' If they tell you the age and the type of anniversary, you should tell them the type and color of flowers that match the input, it's good if you tell me the flower language. If the conversation is not related to flowers, don't continue the conversation. Always answer in Korean."
+, createAt: Date())]
         
         @Published var currentInput: String = ""
         

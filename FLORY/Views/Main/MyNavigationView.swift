@@ -171,61 +171,64 @@ struct MyNavigationView : View {
                     Spacer()
                     
                     //공지사항 뷰
-                    HStack{
-                        //Spacer()
-                        Group{
-                            Spacer()
-                            Spacer()
-                            Spacer()
-                            Spacer()
-                            Spacer()
-                        }
-                        
-                        
-                        HStack(){
-                            
-                            Spacer()
-                            
-                            VStack(alignment: .leading){
+                    //공지사항 뷰
+                    NavigationLink(destination: NoticesView()) {
+                        HStack{
+                            //Spacer()
+                            Group{
                                 Spacer()
-                                Text("FLORY 이야기")
-                                    .font(.system(size: 18))
-                                    .fontWeight(.heavy)
+                                Spacer()
+                                Spacer()
+                                Spacer()
+                                Spacer()
+                            }
+                            
+                            HStack(){
                                 
                                 Spacer()
                                 
-                                Text("공지사항을 들어보세요")
-                                    .font(.system(size: 12))
-                                    .fontWeight(.semibold)
-                                    .foregroundColor(Color(red: 0.643, green: 0.643, blue: 0.643))
+                                VStack(alignment: .leading){
+                                    Spacer()
+                                    Text("FLORY 이야기")
+                                        .font(.system(size: 18))
+                                        .fontWeight(.heavy)
+                                        .foregroundColor(Color.black)
+                                    
+                                    Spacer()
+                                    
+                                    Text("공지사항을 들어보세요")
+                                        .font(.system(size: 12))
+                                        .fontWeight(.semibold)
+                                        .foregroundColor(Color(red: 0.643, green: 0.643, blue: 0.643))
+                                    Spacer()
+                                    Spacer()
+                                    Spacer()
+                                    
+                                }
+                                
                                 Spacer()
-                                Spacer()
+                                Image("Megaphone")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width:70, height:40)
+                                
                                 Spacer()
                                 
                             }
+                            .padding()
+                            .overlay(RoundedRectangle(cornerRadius: 20)
+                                .stroke(Color("BorderColor"), lineWidth: 2))
                             
-                            Spacer()
-                            Image("Megaphone")
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width:70, height:40)
-                            
-                            Spacer()
+                            .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color("BorderColor"), lineWidth: 2))
+                            Group{
+                                Spacer()
+                                Spacer()
+                                Spacer()
+                                Spacer()
+                                Spacer()
+                            }
                             
                         }
-                        .padding()
-                        .overlay(RoundedRectangle(cornerRadius: 20)
-                            .stroke(Color("BorderColor"), lineWidth: 2))
-                        
-                        .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color("BorderColor"), lineWidth: 2))
-                        Group{
-                            Spacer()
-                            Spacer()
-                            Spacer()
-                            Spacer()
-                            Spacer()
-                        }
-                        
                     }
                     
                     //Spacer()
