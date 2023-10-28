@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		FD1E0FCC2AD2AC170091CD33 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1E0FCB2AD2AC170091CD33 /* IntroView.swift */; };
 		FD1E0FCE2AD2CAE60091CD33 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1E0FCD2AD2CAE60091CD33 /* LoginView.swift */; };
-		FD22C2712AE7C21800B0A3AC /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD22C2702AE7C21800B0A3AC /* Post.swift */; };
-		FD22C2742AE7C28D00B0A3AC /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD22C2732AE7C28D00B0A3AC /* PostView.swift */; };
 		FD2454422AC14700005207E5 /* FlowerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2454412AC14700005207E5 /* FlowerListView.swift */; };
 		FD2454442AC158BA005207E5 /* MainButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2454432AC158BA005207E5 /* MainButtonView.swift */; };
 		FD50AF502AE8DBB100873E75 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FD50AF4F2AE8DBB100873E75 /* Alamofire */; };
@@ -18,11 +16,15 @@
 		FD50AF562AE8DD5200873E75 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD50AF552AE8DD5200873E75 /* ChatViewModel.swift */; };
 		FD50AF582AE8DE2100873E75 /* OpenAIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD50AF572AE8DE2100873E75 /* OpenAIService.swift */; };
 		FD50AF5A2AE8DE4F00873E75 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD50AF592AE8DE4F00873E75 /* Constants.swift */; };
+		FD50AF5C2AE8E36800873E75 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD50AF5B2AE8E36800873E75 /* Test.swift */; };
+		FD50AF5E2AE8E6CB00873E75 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD50AF5D2AE8E6CB00873E75 /* TestView.swift */; };
+		FD50AF632AE8F30800873E75 /* NoticesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD50AF622AE8F30800873E75 /* NoticesView.swift */; };
 		FD5857112AC18F11006314B9 /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5857102AC18F11006314B9 /* PaymentView.swift */; };
 		FD58CC102AD2A78300310999 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD58CC0F2AD2A78300310999 /* SplashView.swift */; };
 		FD928D732AD6372F0092C42A /* FlowerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD928D722AD6372F0092C42A /* FlowerDetailView.swift */; };
 		FDAB4B4E2AE78BBE007D9DDE /* AnniversaryManagementView.swiftentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB4B4D2AE78BBE007D9DDE /* AnniversaryManagementView.swiftentView.swift */; };
 		FDBB88262ABB126800C8A1B1 /* MyNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBB88252ABB126800C8A1B1 /* MyNavigationView.swift */; };
+		FDD9B64A2AEA583600367CD6 /* ChatIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD9B6492AEA583600367CD6 /* ChatIntroView.swift */; };
 		FDF171502ABAEDB8001C8F80 /* FLORYApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF1714F2ABAEDB8001C8F80 /* FLORYApp.swift */; };
 		FDF171522ABAEDB8001C8F80 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF171512ABAEDB8001C8F80 /* ContentView.swift */; };
 		FDF171542ABAEDBA001C8F80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDF171532ABAEDBA001C8F80 /* Assets.xcassets */; };
@@ -53,19 +55,21 @@
 /* Begin PBXFileReference section */
 		FD1E0FCB2AD2AC170091CD33 /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
 		FD1E0FCD2AD2CAE60091CD33 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		FD22C2702AE7C21800B0A3AC /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-		FD22C2732AE7C28D00B0A3AC /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		FD2454412AC14700005207E5 /* FlowerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerListView.swift; sourceTree = "<group>"; };
 		FD2454432AC158BA005207E5 /* MainButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButtonView.swift; sourceTree = "<group>"; };
 		FD50AF532AE8DD4900873E75 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		FD50AF552AE8DD5200873E75 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		FD50AF572AE8DE2100873E75 /* OpenAIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIService.swift; sourceTree = "<group>"; };
 		FD50AF592AE8DE4F00873E75 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FD50AF5B2AE8E36800873E75 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		FD50AF5D2AE8E6CB00873E75 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		FD50AF622AE8F30800873E75 /* NoticesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticesView.swift; sourceTree = "<group>"; };
 		FD5857102AC18F11006314B9 /* PaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
 		FD58CC0F2AD2A78300310999 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		FD928D722AD6372F0092C42A /* FlowerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerDetailView.swift; sourceTree = "<group>"; };
 		FDAB4B4D2AE78BBE007D9DDE /* AnniversaryManagementView.swiftentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnniversaryManagementView.swiftentView.swift; sourceTree = "<group>"; };
 		FDBB88252ABB126800C8A1B1 /* MyNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNavigationView.swift; sourceTree = "<group>"; };
+		FDD9B6492AEA583600367CD6 /* ChatIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatIntroView.swift; sourceTree = "<group>"; };
 		FDF1714C2ABAEDB8001C8F80 /* FLORY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FLORY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDF1714F2ABAEDB8001C8F80 /* FLORYApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLORYApp.swift; sourceTree = "<group>"; };
 		FDF171512ABAEDB8001C8F80 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -105,22 +109,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FD22C26F2AE7C19100B0A3AC /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				FD22C2702AE7C21800B0A3AC /* Post.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		FD22C2722AE7C25F00B0A3AC /* Posts */ = {
-			isa = PBXGroup;
-			children = (
-				FD22C2732AE7C28D00B0A3AC /* PostView.swift */,
-			);
-			path = Posts;
-			sourceTree = "<group>";
-		};
 		FD2454472AC17292005207E5 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,13 +119,6 @@
 		FDAB4B4F2AE7B533007D9DDE /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				FD22C2722AE7C25F00B0A3AC /* Posts */,
-				FDAB4B552AE7B695007D9DDE /* Anniversary */,
-				FDAB4B542AE7B640007D9DDE /* Payment */,
-				FDAB4B532AE7B618007D9DDE /* Flower */,
-				FDAB4B522AE7B581007D9DDE /* Main */,
-				FDAB4B512AE7B566007D9DDE /* Authentication */,
-				FDAB4B502AE7B543007D9DDE /* Intro */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -194,6 +175,48 @@
 			path = Anniversary;
 			sourceTree = "<group>";
 		};
+		FDD9B64B2AECF82C00367CD6 /* Chatbot */ = {
+			isa = PBXGroup;
+			children = (
+				FDD9B64D2AECF84100367CD6 /* ViewModel */,
+				FDD9B64C2AECF83C00367CD6 /* View */,
+			);
+			path = Chatbot;
+			sourceTree = "<group>";
+		};
+		FDD9B64C2AECF83C00367CD6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FD50AF532AE8DD4900873E75 /* ChatView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FDD9B64D2AECF84100367CD6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FD50AF552AE8DD5200873E75 /* ChatViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FDD9B64E2AECF8B700367CD6 /* Notice */ = {
+			isa = PBXGroup;
+			children = (
+				FD50AF622AE8F30800873E75 /* NoticesView.swift */,
+			);
+			path = Notice;
+			sourceTree = "<group>";
+		};
+		FDD9B64F2AECF90600367CD6 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				FD50AF5D2AE8E6CB00873E75 /* TestView.swift */,
+				FD50AF5B2AE8E36800873E75 /* Test.swift */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
 		FDF171432ABAEDB8001C8F80 = {
 			isa = PBXGroup;
 			children = (
@@ -217,17 +240,24 @@
 		FDF1714E2ABAEDB8001C8F80 /* FLORY */ = {
 			isa = PBXGroup;
 			children = (
-				FD22C26F2AE7C19100B0A3AC /* Models */,
+				FDD9B64F2AECF90600367CD6 /* Test */,
+				FDAB4B502AE7B543007D9DDE /* Intro */,
+				FDAB4B512AE7B566007D9DDE /* Authentication */,
+				FDAB4B522AE7B581007D9DDE /* Main */,
+				FDAB4B532AE7B618007D9DDE /* Flower */,
+				FDAB4B542AE7B640007D9DDE /* Payment */,
+				FDAB4B552AE7B695007D9DDE /* Anniversary */,
+				FDD9B64E2AECF8B700367CD6 /* Notice */,
+				FDD9B64B2AECF82C00367CD6 /* Chatbot */,
 				FDAB4B4F2AE7B533007D9DDE /* Views */,
 				FD2454472AC17292005207E5 /* Extension */,
 				FDF1714F2ABAEDB8001C8F80 /* FLORYApp.swift */,
 				FDF171512ABAEDB8001C8F80 /* ContentView.swift */,
 				FDF171532ABAEDBA001C8F80 /* Assets.xcassets */,
 				FDF171552ABAEDBA001C8F80 /* Preview Content */,
-				FD50AF532AE8DD4900873E75 /* ChatView.swift */,
-				FD50AF552AE8DD5200873E75 /* ChatViewModel.swift */,
 				FD50AF572AE8DE2100873E75 /* OpenAIService.swift */,
 				FD50AF592AE8DE4F00873E75 /* Constants.swift */,
+				FDD9B6492AEA583600367CD6 /* ChatIntroView.swift */,
 			);
 			path = FLORY;
 			sourceTree = "<group>";
@@ -393,21 +423,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD22C2742AE7C28D00B0A3AC /* PostView.swift in Sources */,
 				FD50AF582AE8DE2100873E75 /* OpenAIService.swift in Sources */,
 				FDF171522ABAEDB8001C8F80 /* ContentView.swift in Sources */,
 				FDAB4B4E2AE78BBE007D9DDE /* AnniversaryManagementView.swiftentView.swift in Sources */,
+				FD50AF5C2AE8E36800873E75 /* Test.swift in Sources */,
 				FD58CC102AD2A78300310999 /* SplashView.swift in Sources */,
+				FDD9B64A2AEA583600367CD6 /* ChatIntroView.swift in Sources */,
 				FD2454422AC14700005207E5 /* FlowerListView.swift in Sources */,
-				FD22C2712AE7C21800B0A3AC /* Post.swift in Sources */,
 				FD2454442AC158BA005207E5 /* MainButtonView.swift in Sources */,
 				FD50AF542AE8DD4900873E75 /* ChatView.swift in Sources */,
 				FD5857112AC18F11006314B9 /* PaymentView.swift in Sources */,
+				FD50AF632AE8F30800873E75 /* NoticesView.swift in Sources */,
 				FDFE45122AD5407900C2073D /* SignUpView.swift in Sources */,
 				FD50AF562AE8DD5200873E75 /* ChatViewModel.swift in Sources */,
 				FD1E0FCC2AD2AC170091CD33 /* IntroView.swift in Sources */,
 				FDF171502ABAEDB8001C8F80 /* FLORYApp.swift in Sources */,
 				FD1E0FCE2AD2CAE60091CD33 /* LoginView.swift in Sources */,
+				FD50AF5E2AE8E6CB00873E75 /* TestView.swift in Sources */,
 				FD928D732AD6372F0092C42A /* FlowerDetailView.swift in Sources */,
 				FDBB88262ABB126800C8A1B1 /* MyNavigationView.swift in Sources */,
 				FD50AF5A2AE8DE4F00873E75 /* Constants.swift in Sources */,

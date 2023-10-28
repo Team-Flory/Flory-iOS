@@ -143,7 +143,7 @@ struct MyNavigationView : View {
                         }
                         
                         HStack{
-                            MainButtonView(destination: ChatView(), buttonText:"꽃다발\n    추천받기", imageName:"Flower3")
+                            MainButtonView(destination: ChatIntroView(), buttonText:"꽃다발\n    추천받기", imageName:"Flower3")
                             
                             Spacer()
                             

@@ -28,7 +28,7 @@ struct ChatView: View {
             if message.role == .user {Spacer()}
             Text(message.content)
                 .padding()
-                .background(message.role == .user ? Color.blue : Color.gray.opacity(0.2))
+                .background(message.role == .user ? Color("MainColor") : Color.gray.opacity(0.2))
             if message.role == .assistant {Spacer()}
         }
     }
