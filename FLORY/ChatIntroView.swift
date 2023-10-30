@@ -75,7 +75,7 @@ struct ChatIntroView: View {
                 
                 Spacer()
                 
-            }.navigationBarHidden(true)
+            }.navigationTitle("AI 도우미")
             
         }
     }
