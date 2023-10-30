@@ -51,8 +51,7 @@ struct FlowerDetailView: View {
                         Spacer()
                         Spacer()
                     }
-                    
-                    
+                
                     Image("ListFlower")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
