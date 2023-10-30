@@ -14,9 +14,7 @@ struct PaymentView: View {
     @Environment(\.presentationMode) var presentationMode
     
     @State private var date = Date()
-    //꽃 수량
     @Binding var quantity: Int
-    //가격 바인딩 추가
     @Binding var pricePerItem: Int
     
     @State private var deliveryFee: Int = 3000

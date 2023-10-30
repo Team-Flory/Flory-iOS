@@ -9,12 +9,10 @@ import SwiftUI
 
 struct FlowerDetailView: View {
     
-    //수량 변수
+    @StateObject private var viewModel = FlowerDetailViewModel()
     @State private var quantity = 3
-    //가격 변수
-    @State private var pricePerItem = 1799
-    
     @State private var showingPayment = false
+    @State private var pricePerItem = Int()
     var body: some View {
         
             GeometryReader { geometry in
@@ -94,7 +92,7 @@ struct FlowerDetailView: View {
                         //꽃이름
                         HStack{
                             Spacer()
-                            Text("소국")
+                            Text(viewModel.flower?.name ?? "Loading...")
                                 .font(.system(size: 30, weight: .bold))
                             Group{
                                 Spacer()
@@ -119,7 +117,7 @@ struct FlowerDetailView: View {
                         //가격, 스테퍼
                         HStack{
                             Spacer()
-                            Text("송이 당 ₩\(pricePerItem) (최소 주문 수량: 3)")
+                            Text("송이 당 ₩\(viewModel.flower?.price ?? 0) (최소 주문 수량: 3)")
                                 .font(.system(size: 16))
                                 .foregroundColor(Color.gray)
                             
@@ -233,10 +231,12 @@ struct FlowerDetailView: View {
                         .stroke(Color.gray, lineWidth: 1)
                         .padding(.bottom, 0))
                 }
-                
+                .onAppear{
+                    viewModel.fetchFlowerDetail()
+                }
             }.edgesIgnoringSafeArea(.all)
             .fullScreenCover(isPresented: $showingPayment) {
-                PaymentView(quantity: $quantity, pricePerItem: $pricePerItem)
+                PaymentView(quantity: $quantity, pricePerItem: Binding.constant(viewModel.flower?.price ?? 0))
             }
     }
 }
