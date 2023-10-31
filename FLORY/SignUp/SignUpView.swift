@@ -9,13 +9,18 @@ import SwiftUI
 
 struct SignUpView: View {
     
+    @ObservedObject var viewModel = SignUpViewModel()
+    
     @State private var name = ""
     @State private var email = ""
     @State private var password = ""
     @State private var phoneNumber = ""
-    
+    @State private var nickname = ""
     @State private var walletAddress = ""
-    @State private var WalletPassword = ""
+    @State private var walletPassword = ""
+    
+    @State private var showAlert = false;
+    @State private var alertMessage = ""
     
     @Binding var showLoginView: Bool
     @Binding var showSignUpView: Bool
@@ -76,6 +81,12 @@ struct SignUpView: View {
                                 RoundedRectangle(cornerRadius: 3)
                                     .stroke(Color.gray.opacity(0.6), lineWidth: 1)
                             )
+                        TextField("닉네임을 입력해주세요", text: $nickname)
+                            .padding()
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 3)
+                                    .stroke(Color.gray.opacity(0.6), lineWidth: 1)
+                            )
                         TextField("이메일을 입력해주세요", text: $email)
                             .padding()
                             .overlay(
@@ -117,7 +128,7 @@ struct SignUpView: View {
                                 RoundedRectangle(cornerRadius: 3)
                                     .stroke(Color.gray.opacity(0.6), lineWidth: 1)
                             )
-                        TextField("지갑 비밀번호를 입력해주세요", text: $WalletPassword)
+                        TextField("지갑 비밀번호를 입력해주세요", text: $walletPassword)
                             .padding()
                             .overlay(
                                 RoundedRectangle(cornerRadius: 3)
@@ -129,13 +140,38 @@ struct SignUpView: View {
                     
                     //가입하기 버튼
                     Button(action:{
-                        self.showLoginView = true
-                        self.showSignUpView = false
+                        let user = User(name: self.name,
+                                        email: self.email,
+                                        password: self.password,
+                                        phoneNumber: self.phoneNumber,
+                                        nickname: self.nickname,
+                                        walletAddress: self.walletAddress,
+                                        walletPassword: self.walletPassword)
+                        
+                        viewModel.signUp(user: user) { success, errorMessage in
+                            if success {
+                                self.alertMessage = "\(self.name)님, 환영합니다! FLORY에 가입해 주셔서 감사합니다."
+                                showAlert =  true
+                            }
+                            else {
+                                self.alertMessage = errorMessage ?? "가입에 실패했습니다. 다시 시도해주세요."
+                                showAlert =  true
+                            }
+                            
+                        }
                     }) {
                         Text("가입하기")
                             .foregroundColor(.white)
                             .frame(maxWidth: .infinity)
                             .padding()
+                    }
+                    .alert(isPresented: $showAlert) {
+                        Alert(title: Text("FLORY"), message: Text(alertMessage), dismissButton: .default(Text("확인")) {
+                            if self.alertMessage == "\(self.name)님, 환영합니다! FLORY에 가입해 주셔서 감사합니다." {
+                                        self.showLoginView = true
+                                        self.showSignUpView = false
+                                    }
+                        })
                     }
                     .background(Color("MainColor"))
                     .cornerRadius(3)
