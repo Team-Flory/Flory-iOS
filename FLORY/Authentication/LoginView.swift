@@ -1,10 +1,3 @@
-//
-//  LoginView.swift
-//  FLORY
-//
-//  Created by gourderased on 2023/10/08.
-//
-
 import SwiftUI
 
 struct LoginView: View {
@@ -20,92 +13,56 @@ struct LoginView: View {
     @Binding var showSignUpView: Bool
     
     var body: some View {
-        NavigationView{
-            VStack{
-                
-                Spacer()
-                Spacer()
+        NavigationView {
+            VStack(spacing: 20) {
                 
                 Image("MainLogo")
                     .font(.system(size: 100))
                     .foregroundColor(.white)
+                    .padding(.top, 90)
                 
                 Spacer()
                 
-                HStack{
-                    Spacer()
-                    Spacer()
+                VStack(spacing: 10) {
                     
-                    VStack{
-                        
-                        TextField("이메일을 입력해주세요", text: $email)
+                    TextField("이메일을 입력해주세요", text: $email)
+                        .padding()
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 3)
+                                .stroke(Color.gray.opacity(0.6), lineWidth: 1)
+                        )
+                    SecureField("패스워드를 입력해주세요", text: $password)
+                        .padding()
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 3)
+                                .stroke(Color.gray.opacity(0.6), lineWidth: 1)
+                        )
+                    
+                    Button(action: {
+                        self.isLoggedIn = true
+                    }) {
+                        Text("로그인")
+                            .foregroundColor(.white)
+                            .frame(maxWidth: .infinity)
                             .padding()
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 3)
-                                    .stroke(Color.gray.opacity(0.6), lineWidth: 1)
-                            )
-                        SecureField("패스워드를 입력해주세요", text: $password)
-                            .padding()
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 3)
-                                    .stroke(Color.gray.opacity(0.6), lineWidth: 1)
-                            )
-                        
-                        Button(action:{
-                            self.isLoggedIn = true
-                        }) {
-                            Text("로그인")
-                                .foregroundColor(.white)
-                                .frame(maxWidth: .infinity)
-                                .padding()
-                        }
-                        .background(Color("MainColor"))
-                        .cornerRadius(3)
-                        .padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
-                        
-                        HStack{
-                            Spacer()
-                            Spacer()
-                            
-                            Text("비밀번호를 잊으셨나요?")
-                                .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 0))
-                                .foregroundColor(Color("MainColor"))
-                            Spacer()
-                            Spacer()
-                        }
-                        
-                        VStack {
-                            Divider()
-                                .padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
-                        }
-                        
                     }
-                    Spacer()
-                    Spacer()
+                    .background(Color("MainColor"))
+                    .cornerRadius(3)
+                    
+                    Text("비밀번호를 잊으셨나요?")
+                        .padding(.top, 20)
+                        .foregroundColor(Color("MainColor"))
+                    
+                    Divider()
+                        .padding(.top, 10)
                 }
+                .padding(.horizontal)
                 
-                Spacer()
+                Spacer().frame(height:5)
                 
                 HStack{
-                    
-                    Group{
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                    }
-                    Group{
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                    }
-                    
-                    Button(action:{
+                    Spacer().frame(width:80)
+                    Button(action: {
                         self.showSignUpView = true
                     }) {
                         Text("새 계정 만들기")
@@ -115,28 +72,10 @@ struct LoginView: View {
                     }
                     .background(Color("SecondaryColor"))
                     .cornerRadius(3)
-                    
-                    
-                    Group{
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                    }
-                    Group{
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                    }
+                    .padding(.horizontal)
+                    Spacer().frame(width:80)
                 }
-                
                 Spacer()
-                
             }
             .navigationBarBackButtonHidden(true)
         }
