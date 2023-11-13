@@ -13,6 +13,8 @@ struct MyNavigationView : View {
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
     }
     
+    @EnvironmentObject var sharedData: SharedData
+    
     var body: some View {
         NavigationView {
             
@@ -28,7 +30,7 @@ struct MyNavigationView : View {
                         Spacer()
                         
                         VStack(alignment: .leading, spacing: 10) {
-                            Text("꽃다발을 \n제작하고 있어요")
+                            Text("꽃다발을 \n제작하고 있어요 \(sharedData.memberId ?? -1)")
                                 .font(.system(size: 18))
                                 .fontWeight(.heavy)
                                 .foregroundColor(Color.black)
@@ -93,6 +95,6 @@ struct MyNavigationView : View {
 
 struct MyNavigationView_Previews: PreviewProvider {
     static var previews: some View {
-        MyNavigationView()
+        MyNavigationView().environmentObject(SharedData())
     }
 }

@@ -4,9 +4,15 @@ import SwiftUI
 import Combine
 
 class LoginViewModel: ObservableObject {
-    @Published var memberId: Int?
+    //@Published var memberId: Int?
     @Published var showAlert = false
     @Published var alertMessage = ""
+    
+    var sharedData: SharedData
+    
+    init(sharedData: SharedData) {
+        self.sharedData = sharedData
+    }
     
     var cancellables = Set<AnyCancellable>()
     
@@ -48,9 +54,11 @@ class LoginViewModel: ObservableObject {
                 }
             }, receiveValue: { loginResponse in
                 if loginResponse.isSuccess {
-                    self.memberId = loginResponse.result.memberId
-                    // 로그인 성공 시 onLoginSuccess 클로저를 호출합니다.
-                    self.onLoginSuccess?()
+                    
+                    self.sharedData.memberId = loginResponse.result.memberId
+                    print("Updated SharedData memberId: \(self.sharedData.memberId)")
+                    // memberId를 SharedData에 저장
+                    self.onLoginSuccess?() // 로그인 성공 시 onLoginSuccess 클로저 호출
                 } else {
                     self.alertMessage = loginResponse.message
                     self.showAlert = true

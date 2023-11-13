@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject private var sharedData = SharedData()
     //스플래시 뷰
     @State private var showMainView = false
     //로그인 뷰
@@ -24,7 +26,7 @@ struct ContentView: View {
                 //로그인뷰와 홈화면 분기
                 if !isLoggedIn {
                     if showLoginView && !showSignUpView{
-                        LoginView(isLoggedIn: $isLoggedIn, showSignUpView: $showSignUpView)
+                        LoginView(isLoggedIn: $isLoggedIn, showSignUpView: $showSignUpView, sharedData: sharedData)
                     } else if !showLoginView && !showSignUpView {
                         IntroView(
                             showLoginView: $showLoginView)
@@ -35,6 +37,7 @@ struct ContentView: View {
                     
                 } else {
                     MyNavigationView()
+                        .environmentObject(sharedData)
                 }
             }
             else {

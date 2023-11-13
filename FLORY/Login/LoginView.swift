@@ -13,11 +13,19 @@ struct LoginView: View {
     @Binding var showSignUpView: Bool
     
     //로그인
-    @ObservedObject private var viewModel = LoginViewModel()
+    @ObservedObject private var viewModel: LoginViewModel
     @State private var showingLoginSuccessAlert = false
     
+    @EnvironmentObject var sharedData: SharedData
+    
+    init(isLoggedIn: Binding<Bool>, showSignUpView: Binding<Bool>, sharedData: SharedData) {
+        self._isLoggedIn = isLoggedIn
+        self._showSignUpView = showSignUpView
+        self.viewModel = LoginViewModel(sharedData: sharedData)
+    }
     
     var body: some View {
+        
         NavigationView {
             VStack(spacing: 20) {
                 
@@ -47,11 +55,7 @@ struct LoginView: View {
                         
                         Button(action: {
                             viewModel.login(with: email, password: password)
-                                if let _ = viewModel.memberId {
-                                    showingLoginSuccessAlert = true
-                                } else {
-                                    // Optionally handle failed login if needed
-                                }
+                                
                         }) {
                             Text("로그인")
                                 .foregroundColor(.white)
@@ -108,7 +112,12 @@ struct LoginView: View {
     
     struct LoginView_Previews: PreviewProvider {
         static var previews: some View {
-            LoginView(isLoggedIn: .constant(false), showSignUpView: .constant(false))
-        }
+            let sharedData = SharedData()
+
+                    // 생성된 sharedData를 LoginView의 초기화에 전달합니다.
+                    LoginView(isLoggedIn: .constant(false),
+                              showSignUpView: .constant(false),
+                              sharedData: sharedData)
+                }
     }
 }

@@ -12,6 +12,7 @@ struct FLORYApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(SharedData())
         }
     }
 }
