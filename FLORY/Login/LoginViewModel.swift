@@ -56,7 +56,6 @@ class LoginViewModel: ObservableObject {
                 if loginResponse.isSuccess {
                     
                     self.sharedData.memberId = loginResponse.result.memberId
-                    print("Updated SharedData memberId: \(self.sharedData.memberId)")
                     // memberId를 SharedData에 저장
                     self.onLoginSuccess?() // 로그인 성공 시 onLoginSuccess 클로저 호출
                 } else {
