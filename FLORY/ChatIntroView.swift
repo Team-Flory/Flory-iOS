@@ -1,10 +1,3 @@
-//
-//  ChatViewIntro.swift
-//  FLORY
-//
-//  Created by gourderased on 2023/10/26.
-//
-
 import SwiftUI
 
 struct ChatIntroView: View {
