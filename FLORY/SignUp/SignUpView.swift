@@ -17,7 +17,6 @@ struct SignUpView: View {
     @State private var phoneNumber = ""
     @State private var nickname = ""
     @State private var walletAddress = ""
-    @State private var walletPassword = ""
     
     @State private var showAlert = false;
     @State private var alertMessage = ""
@@ -128,12 +127,7 @@ struct SignUpView: View {
                                 RoundedRectangle(cornerRadius: 3)
                                     .stroke(Color.gray.opacity(0.6), lineWidth: 1)
                             )
-                        TextField("지갑 비밀번호를 입력해주세요", text: $walletPassword)
-                            .padding()
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 3)
-                                    .stroke(Color.gray.opacity(0.6), lineWidth: 1)
-                            )
+                        
                     }
                     
                     Spacer()
@@ -145,8 +139,7 @@ struct SignUpView: View {
                                         password: self.password,
                                         phoneNumber: self.phoneNumber,
                                         nickname: self.nickname,
-                                        walletAddress: self.walletAddress,
-                                        walletPassword: self.walletPassword)
+                                        walletAddress: self.walletAddress)
                         
                         viewModel.signUp(user: user) { success, errorMessage in
                             if success {

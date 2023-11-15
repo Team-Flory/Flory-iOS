@@ -5,5 +5,4 @@ struct User: Codable {
     var phoneNumber: String
     var nickname: String
     var walletAddress: String
-    var walletPassword: String
 }
